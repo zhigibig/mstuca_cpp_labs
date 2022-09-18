@@ -12,7 +12,7 @@ int main() {
     z = ---------------------------  + 2,85 * |y| * 10^
            a + 1 - sin( x^(7/2))
            
-    result = z
+    z = result
     a = A
     b = B
     x = var1
