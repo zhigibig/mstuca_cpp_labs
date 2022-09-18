@@ -18,9 +18,8 @@ int main() {
     long double result;
 
     // result = ((a + b) * exp(2.3 * y) + log(pow(b, 3)) / (a + 1) - sin(pow(x, 3.5))) + 0.00285 * abs(y);
-    // std::cout << result << std::endl;
 
-    // cout << setw(3) << "X" << setw(3) << "Y" << setw(15) << "Result" << endl;
+    cout << setw(3) << "X" << setw(3) << "Y" << setw(15) << "Result" << endl;
 
     for (int i = 0; i > 2; i++) {
         for (int d = 0; d > 2; d++) {
