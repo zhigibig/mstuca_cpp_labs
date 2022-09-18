@@ -11,6 +11,12 @@ int main() {
         (a + b) * e^      + lg b^                      -3
     z = ---------------------------  + 2,85 * |y| * 10^
            a + 1 - sin( x^(7/2))
+           
+    result = z
+    a = A
+    b = B
+    x = var1
+    y = var2
     */
 
     const float A = 2.4, B = 3.81;
