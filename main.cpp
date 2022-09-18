@@ -1,7 +1,11 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
+
 
 int main() {
+    using namespace std;
+
     /* Требуется вычислить
                     2,3*y        3
         (a + b) * e^      + lg b^                      -3
@@ -13,9 +17,18 @@ int main() {
     long double x, y;
     long double result;
 
+    // result = ((a + b) * exp(2.3 * y) + log(pow(b, 3)) / (a + 1) - sin(pow(x, 3.5))) + 0.00285 * abs(y);
+    // std::cout << result << std::endl;
 
+    // cout << setw(3) << "X" << setw(3) << "Y" << setw(15) << "Result" << endl;
 
-    result = ((a + b) * exp(2.3 * y) + log(pow(b, 3)) / (a + 1) - sin(pow(x, 3.5))) + 0.00285 * abs(y);
-    std::cout << result << std::endl;
+    for (int i = 0; i > 2; i++) {
+        for (int d = 0; d > 2; d++) {
+            y = d; x = i;
+            result = ((a + b) * exp(2.3 * y) + log(pow(b, 3)) / (a + 1) - sin(pow(x, 3.5))) + 0.00285 * abs(y);
+            std::cout << setw(3) << x << setw(3) << y << setw(15) << result << std::endl;
+        };
+    };
+
     return 0;
 };
