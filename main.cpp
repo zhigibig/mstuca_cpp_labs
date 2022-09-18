@@ -14,16 +14,11 @@ int main() {
     */
 
     const float a = 2.4, b = 3.81;
-    long double x, y;
+    long double x, y; 
     long double result;
 
-    // result = ((a + b) * exp(2.3 * y) + log(pow(b, 3)) / (a + 1) - sin(pow(x, 3.5))) + 0.00285 * abs(y);
-
-    cout << setw(3) << "X" << setw(3) << "Y" << setw(15) << "Result" << endl;
-
-    for (int i = 0; i > 2; i++) {
-        for (int d = 0; d > 2; d++) {
-            y = d; x = i;
+    for (x = 0; x < 3; x++) {
+        for (y = 0; y < 3; y++) {
             result = ((a + b) * exp(2.3 * y) + log(pow(b, 3)) / (a + 1) - sin(pow(x, 3.5))) + 0.00285 * abs(y);
             std::cout << setw(3) << x << setw(3) << y << setw(15) << result << std::endl;
         };
