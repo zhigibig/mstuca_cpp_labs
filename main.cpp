@@ -13,14 +13,14 @@ int main() {
            a + 1 - sin( x^(7/2))
     */
 
-    const float a = 2.4, b = 3.81;
-    long double x, y; 
+    const float A = 2.4, B = 3.81;
+    long double var1, var2; 
     long double result;
 
-    for (x = 0; x < 3; x++) {
-        for (y = 0; y < 3; y++) {
-            result = ((a + b) * exp(2.3 * y) + log(pow(b, 3)) / (a + 1) - sin(pow(x, 3.5))) + 0.00285 * abs(y);
-            std::cout << setw(3) << x << setw(3) << y << setw(15) << result << std::endl;
+    for (var1 = 0; var1 < 3; var1++) {
+        for (var2 = 0; var2 < 3; var2++) {
+            result = ((A + B) * exp(2.3 * var2) + log(pow(B, 3)) / (A + 1) - sin(pow(var1, 3.5))) + 0.00285 * abs(var2);
+            std::cout << setw(3) << var1 << setw(3) << var2 << setw(15) << result << std::endl;
         };
     };
 
