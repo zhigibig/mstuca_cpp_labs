@@ -39,7 +39,7 @@ int main() {
     const float a = 2.4, b = 3.81;
     long double x, y; 
     long double result;
-    string enterance_check_res;
+    string entrance_check_res;
 
     cout << setw(6) << "X" << setw(6) << "Y" << setw(10) << "Result" << setw(13) << "Graph ent" << "\n" << endl;
 
@@ -48,12 +48,12 @@ int main() {
             result = ((a + b) * exp(2.3 * y) + log(pow(b, 3)) / (a + 1) - sin(pow(x, 3.5))) + 0.00285 * abs(y);
 
             if ( entrance_checking(x, y) == 1 ) {
-                enterance_check_res = "true";
+                entrance_check_res = "true";
             } else {
-                enterance_check_res = "false";
+                entrance_check_res = "false";
             };
 
-            cout << setw(6) << x << setw(6) << y << setw(10) << result << setw(13) << enterance_check_res << endl;
+            cout << setw(6) << x << setw(6) << y << setw(10) << result << setw(13) << entrance_check_res << endl;
 
         };
     };
