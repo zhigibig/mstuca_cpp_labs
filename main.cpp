@@ -2,19 +2,19 @@
 #include <cmath> 
 #include <iomanip> 
 
-bool entrance_checking(long double var1, long double var2) {
-    if (var1 < 0 || var2 < 0) {
+bool entrance_checking(long double posX, long double posY) {
+    if (posX < 0 || posY < 0) {
         return false;
     };
 
-    if (var1 <= 1 && var2 <= 1) {
+    if (posX <= 1 && posY <= 1) {
         return true;
     };
 
-    if ( (var1 <= 2) && (var2 <= 1.5) ) {
+    if ( (posX <= 2) && (posY <= 1.5) ) {
         return true;
     };
-    
+
     return false;
 };
 
