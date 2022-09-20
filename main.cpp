@@ -2,19 +2,20 @@
 #include <cmath> 
 #include <iomanip> 
 
-bool enterance_checking(long double var1, long double var2) {
-    /*
-    Функция для проверки вхождения координат в график
-    */
+bool entrance_checking(long double var1, long double var2) {
     if (var1 < 0 || var2 < 0) {
         return false;
-    } else if (var1 <= 1 && var2 <= 1) {
-        return true;
-    } else if ( (var1 <= 2) && (var2 <= 1.5) ) {
-        return true;
-    } else {
-        return false;
     };
+
+    if (var1 <= 1 && var2 <= 1) {
+        return true;
+    };
+
+    if ( (var1 <= 2) && (var2 <= 1.5) ) {
+        return true;
+    };
+    
+    return false;
 };
 
 int main() {
@@ -46,7 +47,7 @@ int main() {
         for (y = -1; y <= 2.5; y += 0.5) {
             result = ((a + b) * exp(2.3 * y) + log(pow(b, 3)) / (a + 1) - sin(pow(x, 3.5))) + 0.00285 * abs(y);
 
-            if ( enterance_checking(x, y) == 1 ) {
+            if ( entrance_checking(x, y) == 1 ) {
                 enterance_check_res = "true";
             } else {
                 enterance_check_res = "false";
