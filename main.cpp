@@ -2,21 +2,7 @@
 #include <cmath> 
 #include <iomanip> 
 
-bool entrance_checking(long double posX, long double posY) {
-    if (posX < 0 || posY < 0) {
-        return false;
-    };
-
-    if (posX <= 1 && posY <= 1) {
-        return true;
-    };
-
-    if ( (posX <= 2) && (posY <= 1.5) ) {
-        return true;
-    };
-
-    return false;
-};
+bool entrance_checking(long double, long double);
 
 int main() {
     using namespace std;
@@ -39,24 +25,40 @@ int main() {
     const float a = 2.4, b = 3.81;
     long double x, y; 
     long double result;
-    string entrance_check_res;
+    string enterance_check_res;
 
     cout << setw(6) << "X" << setw(6) << "Y" << setw(10) << "Result" << setw(13) << "Graph ent" << "\n" << endl;
 
-    for (x = -1; x <= 2.5; x += 0.5) {
-        for (y = -1; y <= 2.5; y += 0.5) {
+    for (x = -1; x <= 2.5; x += 1) {
+        for (y = -1; y <= 2.5; y += 1) {
             result = ((a + b) * exp(2.3 * y) + log(pow(b, 3)) / (a + 1) - sin(pow(x, 3.5))) + 0.00285 * abs(y);
 
             if ( entrance_checking(x, y) == 1 ) {
-                entrance_check_res = "true";
+                enterance_check_res = "true";
             } else {
-                entrance_check_res = "false";
+                enterance_check_res = "false";
             };
 
-            cout << setw(6) << x << setw(6) << y << setw(10) << result << setw(13) << entrance_check_res << endl;
+            cout << setw(6) << x << setw(6) << y << setw(10) << result << setw(13) << enterance_check_res << endl;
 
         };
     };
 
     return 0;
+};
+
+bool entrance_checking(long double posX, long double posY) {
+    if (posX < 0 || posY < 0) {
+        return false;
+    };
+
+    if (posX <= 1 && posY <= 1) {
+        return true;
+    };
+
+    if ( (posX <= 2) && (posY <= 1.5) ) {
+        return true;
+    };
+
+    return false;
 };
