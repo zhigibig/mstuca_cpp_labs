@@ -18,7 +18,7 @@ int main() {
     cout << "it's too expensive for me!" << endl;
   } else if (price > 200) {
     cout << "it's too expensive for so short travell!" << endl;
-  } else if (price > 200) {
+  } else if (price > 100) {
     cout << "normal price, but i don't have any money. I'll be tomorrow" << endl;
   } else {
     cout << "I'm takin' it" << endl;
