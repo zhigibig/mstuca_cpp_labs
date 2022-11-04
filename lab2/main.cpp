@@ -15,14 +15,15 @@ int main() {
   cout << '\n' << price << "$ - ";
 
   if (price > 500) {
-    cout << "it's too expensive for me!" << endl;
+    cout << "it's too expensive for me!";
   } else if (price > 200) {
-    cout << "it's too expensive for so short travell!" << endl;
+    cout << "it's too expensive for so short travell!";
   } else if (price > 100) {
-    cout << "normal price, but i don't have any money. I'll be tomorrow" << endl;
+    cout << "normal price, but i don't have any money. I'll be tomorrow";
   } else {
-    cout << "I'm takin' it" << endl;
+    cout << "I'm takin' it";
   };
+  cout<<endl;
 
   return 0;
 };
