@@ -28,11 +28,11 @@ int main() {
 
   long double arithmetic_mean = matrix_sum / 30;
 
-  std::string separator = "||==========||==========||==========||==========||==========||==========||";
+  std::string row_separator = "||==========||==========||==========||==========||==========||==========||";
 
-  std::cout << separator << std::endl 
+  std::cout << row_separator << std::endl 
   << "|| Данные 1 || Данные 2 || Данные 3 || Данные 4 || Данные 5 || Данные 6 ||" 
-  << std::endl << separator << std::endl;
+  << std::endl << row_separator << std::endl;
 
   for(int row = 0; row < 5; row++) {
     std::cout << "||";
@@ -41,7 +41,7 @@ int main() {
       std::cout << std::setw(10) << matrix[row][column] << "||";
     };
 
-    std::cout << std::endl << separator << std::endl;
+    std::cout << std::endl << row_separator << std::endl;
   };
 
   std::cout << std::endl << "arithmetic mean of matrix = " << arithmetic_mean << std::endl;
