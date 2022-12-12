@@ -7,13 +7,13 @@
  
 int main() {
   std::cout << "v1" << std::endl;
+  srand((unsigned)time(0));
   long double matrix[5][6];
  
   std::cout << "Enter values of matrix" << std::endl;
   for(int row = 0; row < 5; row++) {
     for(int column = 0; column < 6; column++) {
-      srand((unsigned)time(0));
-      matrix[row][column] = (rand()%500000)+500000;
+      matrix[row][column] = (rand()%1000000)+1;
     };
   };
  
